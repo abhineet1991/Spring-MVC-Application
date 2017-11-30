@@ -28,6 +28,7 @@
 	font-size: 13px;
 	font-weight: bold;
 }
+
 </style>
 
 <body>
@@ -41,8 +42,8 @@
 		HttpSession session = request.getSession();
 		session.invalidate();
 	%>
-	<form method="post" name="logForm" action="searchVisitor.htm" onsubmit="return validateForm()">
-		<table width="80%" align="center" border="1" bordercolor="#339999">
+	<form method="post" name="logForm" action="searchVisitor.htm"  onsubmit="return validateForm()">
+		<table width="80%" align="center" border="1" bordercolor="#339999" bgcolor="#FFFFFF">
 			<tr>
 				<td align="Center">
 					<div id="header">

@@ -104,11 +104,14 @@ function isNumeric(value) {
 	font-weight: bold;
 	font-size: 20px;
 }
+body {
+	background-color: #ffffff;
+	background-image: url("Samfmain.jpg");
+}
 </style>
 </head>
 
 <body>
-	<br/><br/>
 	<form action="newVistor.htm" name="regform" method="post" onsubmit="return validateForm()">
 	<table width="80%" align="center"  border="2">
 		<tbody><tr>
@@ -205,20 +208,32 @@ function isNumeric(value) {
 		<tr><td colspan="4" align="center"><div style="font-size: 15px; color: red; font-weight: bold;">${REGISTRATIONSTATUSMESSAGE}</div></td></tr>
 	</tbody></table>
 	
+			</form>
 	
 	
-	</form>
-	
-	
-	
-	<form> 
 
+	
 	
 	<script>
 	function toCelcius (fahrenheit){
 		
 		return (5/9) * (fahrenheit-32);	
 	}
+	
+	function displayItems(){
+		
+		var items = ["Maruti", "Volvo", "Tata" , "BMW"];
+        var text = "";
+		var elements = document.forms["regform"];
+		var i ; 
+		for (i =0 ; i <elements.length ; i++ ) {
+			
+		text += elements[i].name + "<br>";	
+		}
+		document.getElementById('12').innerHTML = text + items;
+	}
+	
+	
 	//document.getElementById("demo").innerHTML = toCelsius(77);
 	
 	</script>
@@ -230,17 +245,12 @@ function isNumeric(value) {
 	<table  width="80%" align="center"  border="2"> 
 	
 	<tr>
-	<td>
-		<p>Hello World!</p>
-
-	<p>The DOM is very useful.</p>
-	<p>This example demonstrates the <b>getElementsByTagName</b> method</p>
-
-	<p id="demo"></p>
+    <td>
+	<p id='demo'></p>
 	<p id = '12'>This is another table</p>
 	
-	 <input value= "Playing" type= "submit" onclick = "toCelcius(77)">
-	 <button onclick = "document.getElementById("demo").innerHTML = toCelcius(77)">I AM HERE </button>
+	<!--  <input value= "Playing" type= "submit" onclick = "toCelcius(77)">--> 
+	 <button type = "button" onclick = "document.getElementById('demo').innerHTML = toCelcius(77);displayItems()">I AM HERE </button>
 	
 	<!-- "document.getElementsByTagName('p').innerHTML ='I AM ALIVE'" -->
 	</td>
@@ -255,7 +265,6 @@ function isNumeric(value) {
 	
 	</table>
 	
-	</form>
 </body>
 
 </html>
