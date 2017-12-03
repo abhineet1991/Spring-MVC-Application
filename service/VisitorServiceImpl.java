@@ -71,10 +71,7 @@ public class VisitorServiceImpl implements VisitorService {
 			visitor = visitorDAO.searchUser(username, password);
 		} catch (SQLException exception) {
 			log.info("Exception is :" + exception.getMessage());
-		} catch (ClassNotFoundException exception) {
-			log.info("Exception is :" + exception.getMessage());
-		}
-		return visitor;
+		} 		return visitor;
 	}
 
 	/**
@@ -94,6 +91,7 @@ public class VisitorServiceImpl implements VisitorService {
 		try {
 			visitorDAO.registerVisitorToEvent(visitor, eventid, sessionid);
 			eventDAO.updateEventNominations(eventid, sessionid);
+                 visitorDAO.updateVisitorDetails(visitor);
 		} catch (SQLException exception) {
 			log.info("Exception is :" + exception.getMessage());
 		} catch (ClassNotFoundException exception) {
