@@ -25,7 +25,44 @@ public class FERSDbQuery {
 	private String deleteEventSession = "";
 	private String deleteEventSessionSignup = "";
 
-    // TO DO 
+    // SQL queries for VISITORDAO
+	private String insertQuery = "";
+	private String searchQuery = "";
+	private String registerQuery = "";
+	private String statusQuery = " ";
+	private String updateQuery = "";
+	private String deleteEventQuery = "";
+	private String validateVisitor = "";
+	private String changePWDQuery = "";
+	private String verifyPWDQuery = "";	
+
+	public String getSelectEventCoordinator() {
+		return selectEventCoordinator;
+	}
+
+	public void setSelectEventCoordinator(String selectEventCoordinator) {
+		this.selectEventCoordinator = selectEventCoordinator;
+	}
+
+	public String getUpdateEventSession() {
+		return updateEventSession;
+	}
+
+	public void setUpdateEventSession(String updateEventSession) {
+		this.updateEventSession = updateEventSession;
+	}
+
+	public String getInsertEvent() {
+		return insertEvent;
+	}
+
+	public void setInsertEvent(String insertEvent) {
+		this.insertEvent = insertEvent;
+	}
+
+	public String getSearchEvent() {
+		return searchEvent;
+	}
 
 	public void setSearchEvent(String searchEvent) {
 		this.searchEvent = searchEvent;
