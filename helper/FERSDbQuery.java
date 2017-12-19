@@ -25,7 +25,7 @@ public class FERSDbQuery {
 	private String deleteEventSession = "";
 	private String deleteEventSessionSignup = "";
 
-    // SQL queries for VISITORDAO
+	// SQL queries for VISITORDAO
 	private String insertQuery = "";
 	private String searchQuery = "";
 	private String registerQuery = "";
