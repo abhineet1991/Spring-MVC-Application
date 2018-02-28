@@ -1,0 +1,7 @@
+*{color: #fff;}
+.bg{background: url('../images/Samfmain.jpg') no-repeat; width: 100%; height: 100vh; background-size:cover;}
+.form-container{border:0px solid rgb(0,0,0); padding:60px 50px; margin-top:25%;
+-webkit-box-shadow: 1px 4px 23px 10px rgba(0,0,0,0.50);
+-moz-box-shadow: 1px 4px 23px 10px rgba(0,0,0,0.50);
+box-shadow: 1px 4px 23px 10px rgba(0,0,0,0.50);
+}
